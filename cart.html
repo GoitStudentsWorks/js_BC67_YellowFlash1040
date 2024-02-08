@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/js_BC67_YellowFlash1040/images/svg/site-icon.svg" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    
+    
+    
+    <script type="module" crossorigin src="/js_BC67_YellowFlash1040/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_BC67_YellowFlash1040/assets/vendor-bb737cb9.js">
+    <link rel="modulepreload" crossorigin href="/js_BC67_YellowFlash1040/assets/footer-a13dfadb.js">
+    <link rel="stylesheet" href="/js_BC67_YellowFlash1040/assets/footer-ce979c06.css">
+    <link rel="stylesheet" href="/js_BC67_YellowFlash1040/assets/cart-73f5042e.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container page-header">
+  <a class="logo" href="./index.html">
+    <svg class="logo-icon">
+      <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-logo"></use>
+    </svg>
+    Food Bootique
+  </a>
+
+  <nav class="nav">
+    <a class="home-link" href="./index.html">Home</a>
+    <a class="cart-logo" href="./cart.html">
+      <span class="circle-btn cart-btn">
+        <svg class="btn-svg cart-btn-svg">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-shopping-cart"></use>
+        </svg>
+      </span>
+      <span class="cart-logo-span" id="cart-quantity">CART (0)</span>
+    </a>
+  </nav>
+</header>
+
+    <!-- main -->
+    <main>
+  <section class="cart-sect container">
+    <div class="cart-items-panel-container">
+      <div class="cart-items-quantity">
+        <span class="circle-btn cart-btn">
+          <svg class="btn-svg cart-btn-svg cart">
+            <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-shopping-cart"></use>
+          </svg>
+        </span>
+        <h1 class="cart-page-title" id="cart-quantity-title">cart (0)</h1>
+      </div>
+
+      <div class="delete-all">
+        <button type="button" class="delete-all-btn" id="delete-all-btn">
+          Delete all
+
+          <svg class="clos-svg">
+            <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="cart-items-list" id="cart-items-list"></ul>
+    </div>
+
+    <div class="checkout-panel-container">
+      <h2 class="cart-page-title your-order-title">your order</h2>
+      <div class="total-container">
+        <h3 class="total-title">Total</h3>
+        <p>
+          <span class="sum"> Sum: </span>
+          <span class="sum-span" id="sum-span"></span>
+        </p>
+      </div>
+      <form class="checkout-form">
+        <div class="mail-field-container">
+          <label class="email-label" for="email">Mail: </label>
+          <input
+            class="mail-field"
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <button class="checkout-button" type="submit">Checkout</button>
+      </form>
+    </div>
+
+    <div class="nothing-found-cart-div" id="nothing-found-cart">
+      <img
+        class="nothing-found-cart-img"
+        src="/js_BC67_YellowFlash1040/images/png/nothing-found-cart.png"
+        alt="a cart"
+      />
+      <p class="nothing-found-cart-title">
+        Your basket is <span class="accent">empty...</span>
+      </p>
+      <p class="nothing-found-cart-desc">
+        Go to the main page to select your favorite products and add them to the
+        cart.
+      </p>
+    </div>
+  </section>
+</main>
+
+    <!-- footer -->
+    <!--Footer-->
+<footer>
+  <div class="container footer-container">
+    <div class="social-links-panel">
+      <a class="footer-logo" href="../index.html">
+        <svg class="footer-logo-icon" width="28" height="28">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-logo"></use>
+        </svg>
+
+        Food Boutique
+      </a>
+
+      <ul class="social-media-list">
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-middle-containers-wrapper">
+      <div class="slogan-panel">
+        <span class="main-point-text"
+          >Discover the Variety of Flavors and Quality</span
+        >
+        <p class="slogan-text">
+          An online store where you will find fresh, natural and delicious
+          products for a healthy life and unforgettable gastronomic adventures.
+        </p>
+      </div>
+      <div class="subscribe-to-new-products-panel">
+        <p class="form-label">Subscribe and learn about new products!</p>
+        <form class="subscribe-form">
+          <input
+            class="subscribe-form-email-field"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+            required
+            autocomplete="email"
+          />
+          <button class="send-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="privacy-policy-and-rights-panel">
+      <span class="rights-label">Food Boutique. All rights reserved.</span>
+      <div class="privacy-policy-links-container">
+        <a class="privacy-policy-link" href="">Privacy Policy</a>
+        <span>/</span>
+        <a class="terms-of-service-link" href="">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- JavaScript Scripts -->
+
+<script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+
+
+  </body>
+</html>

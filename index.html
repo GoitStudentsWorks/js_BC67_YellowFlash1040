@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/js_BC67_YellowFlash1040/images/svg/site-icon.svg" />
+    <title>Food Boutique</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    
+    
+    
+    <script type="module" crossorigin src="/js_BC67_YellowFlash1040/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_BC67_YellowFlash1040/assets/vendor-bb737cb9.js">
+    <link rel="modulepreload" crossorigin href="/js_BC67_YellowFlash1040/assets/footer-a13dfadb.js">
+    <link rel="stylesheet" href="/js_BC67_YellowFlash1040/assets/footer-ce979c06.css">
+  </head>
+  <body>
+    <header class="container page-header">
+  <a class="logo" href="./index.html">
+    <svg class="logo-icon">
+      <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-logo"></use>
+    </svg>
+    Food Bootique
+  </a>
+
+  <nav class="nav">
+    <a class="home-link" href="./index.html">Home</a>
+    <a class="cart-logo" href="./cart.html">
+      <span class="circle-btn cart-btn">
+        <svg class="btn-svg cart-btn-svg">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-shopping-cart"></use>
+        </svg>
+      </span>
+      <span class="cart-logo-span" id="cart-quantity">CART (0)</span>
+    </a>
+  </nav>
+</header>
+
+    <main>
+      <section class="container hero-sect">
+  <h1 class="hero-title">
+    Welcome to the <span class="accent">Food</span> Boutique!
+  </h1>
+  <p class="hero-desc">
+    With Food Boutique, you're not just subscribing to food, you're signing up
+    for a fresher, fitter, and happier you.
+  </p>
+  <div class="hero-img-container">
+    <picture>
+      <source
+        srcset="/js_BC67_YellowFlash1040/images/jpg/hero-desctop.jpg"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="/js_BC67_YellowFlash1040/images/jpg/hero-img-tablet.jpg"
+        media="(min-width: 768px)"
+      />
+
+      <img
+        class="hero-img"
+        src="/js_BC67_YellowFlash1040/images/jpg/hero-img.jpg"
+        alt="a box full of vegetables"
+      />
+    </picture>
+
+    <img
+      class="organic-img"
+      src="/js_BC67_YellowFlash1040/images/png/organic.png"
+      alt="organic food logo"
+    />
+  </div>
+</section>
+
+      <section class="container filters-sect">
+  <h2 class="visually-hidden">Filter goods</h2>
+  <p class="filters-title">Filters:</p>
+  <form id="filters-form">
+    <div class="field-label">
+      <input
+        class="field"
+        type="text"
+        name="keyword"
+        id="keyword-input"
+        placeholder="Search for anything"
+      />
+      <button class="input-btn" type="submit">
+        <svg class="input-icon">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-search"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="field-label">
+      <select class="field select cursor-pointer" name="category" id="category-select">
+        <option value="">Categories</option>
+      </select>
+      <ul class="categories-list display-none" id="categories"></ul>
+      <svg class="centreted-svg stroke-icon">
+        <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-chevron-down"></use>
+      </svg>
+    </div>
+  </form>
+</section>
+
+      <div class="container products-and-aside-container">
+  <section class="products-sect">
+  <h2 class="visually-hidden">Products List</h2>
+  <ul class="products-list" id="products"></ul>
+  <div class="nothing-found display-none" id="nothing-found">
+    <p class="nothing-found-title">
+      Nothing was found for the selected <span class="accent">filters...</span>
+    </p>
+    <p class="nothing-found-description">
+      Try adjusting your search parameters or browse our range by other criteria
+      to find the perfect product for you.
+    </p>
+  </div>
+  <div class="pages-panel" id="pages-panel">
+    <div class="turn-page-buttons">
+      <button type="button" class="turn-page-btn circle-btn" id="to-the-start">
+        <svg class="btn-svg product">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-double-previous"></use>
+        </svg>
+      </button>
+      <button type="button" class="turn-page-btn circle-btn" id="previous">
+        <svg class="btn-svg product">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-previous"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="pages-list" id="pages-list"></ul>
+    <div class="turn-page-buttons">
+      <button type="button" class="turn-page-btn circle-btn" id="next">
+        <svg class="btn-svg product">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-next"></use>
+        </svg>
+      </button>
+      <button type="button" class="turn-page-btn circle-btn" id="to-the-end">
+        <svg class="btn-svg product">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-double-next"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!--Product adverbs-->
+<aside class="product-adverbs-section">
+  <ul class="product-adverbs-list">
+    <li>
+      <!-- Popular products -->
+<h2 class="popular-products-section-title">Popular products</h2>
+<ul class="popular-products-list"></ul>
+
+    </li>
+    <li>
+      <!-- Discount products -->
+<h2 class="discount-products-section-title">Discount products</h2>
+<ul class="discount-products-list"></ul>
+
+    </li>
+  </ul>
+</aside>
+
+</div>
+
+    </main>
+    <!--Footer-->
+<footer>
+  <div class="container footer-container">
+    <div class="social-links-panel">
+      <a class="footer-logo" href="../index.html">
+        <svg class="footer-logo-icon" width="28" height="28">
+          <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-logo"></use>
+        </svg>
+
+        Food Boutique
+      </a>
+
+      <ul class="social-media-list">
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            class="social-media-link"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+          >
+            <svg class="social-media-item-icon" width="24" height="24">
+              <use href="/js_BC67_YellowFlash1040/images/svg/icons.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-middle-containers-wrapper">
+      <div class="slogan-panel">
+        <span class="main-point-text"
+          >Discover the Variety of Flavors and Quality</span
+        >
+        <p class="slogan-text">
+          An online store where you will find fresh, natural and delicious
+          products for a healthy life and unforgettable gastronomic adventures.
+        </p>
+      </div>
+      <div class="subscribe-to-new-products-panel">
+        <p class="form-label">Subscribe and learn about new products!</p>
+        <form class="subscribe-form">
+          <input
+            class="subscribe-form-email-field"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+            required
+            autocomplete="email"
+          />
+          <button class="send-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="privacy-policy-and-rights-panel">
+      <span class="rights-label">Food Boutique. All rights reserved.</span>
+      <div class="privacy-policy-links-container">
+        <a class="privacy-policy-link" href="">Privacy Policy</a>
+        <span>/</span>
+        <a class="terms-of-service-link" href="">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- JavaScript Scripts -->
+
+
+
+<script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"
+></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+  </body>
+</html>
