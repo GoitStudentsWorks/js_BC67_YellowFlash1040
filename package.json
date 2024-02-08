@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/FoodBoutique/",
+    "build": "vite build --base=/js_BC67_YellowFlash1040/",
     "preview": "vite preview"
   },
   "devDependencies": {
